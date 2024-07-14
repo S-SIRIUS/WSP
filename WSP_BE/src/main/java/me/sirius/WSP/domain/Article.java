@@ -42,7 +42,7 @@ public class Article {
 
     //사용자 ID(FK)
     @ManyToOne // 사용자가 탈퇴해도 게시글은 남는다.
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JoinColumn(name = "u_id", referencedColumnName = "id")
     User user;
 
 }

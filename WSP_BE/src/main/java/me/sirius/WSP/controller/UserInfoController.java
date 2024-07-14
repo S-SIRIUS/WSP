@@ -16,8 +16,7 @@ public class UserInfoController {
 
     @GetMapping("/wsp/ranking")
     public ResponseEntity<List<UserInfoResponse>> findAllUserInfo(){
-        List<UserInfoResponse>userinfo = userInfoService
-                .findAll()
+        List<UserInfoResponse> userinfo = userInfoService.findAll()
                 .stream()
                 .map(UserInfoResponse::new)
                 .toList();

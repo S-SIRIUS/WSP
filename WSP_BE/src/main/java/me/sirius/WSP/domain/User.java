@@ -2,9 +2,6 @@ package me.sirius.WSP.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,7 +11,7 @@ import java.util.List;
 @Getter
 @Entity
 @Table(name="user")
-public class User implements UserDetails {
+public class User{
 
     // 유저 ID(PK)
     @Id
@@ -35,7 +32,7 @@ public class User implements UserDetails {
         this.email = email;
         this.password = password;
     }
-
+    /*
     @Override //권한목록 반환
     public Collection<? extends GrantedAuthority> getAuthorities(){
         return List.of(new SimpleGrantedAuthority("user"));
@@ -76,6 +73,6 @@ public class User implements UserDetails {
         // 계정사용 가능한지 확인하는 로직
         return true;
     }
-
+    */
 
 }
