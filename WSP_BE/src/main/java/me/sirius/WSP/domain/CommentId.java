@@ -19,6 +19,6 @@ class CommentId implements Serializable {
     @Column(name="a_id")
     private int a_id;
 
-    @Column(name="id")
+    @Column(name="id", nullable=false, updatable = false)
     private int id;
 }

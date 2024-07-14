@@ -36,6 +36,7 @@ public class Comment {
 
     // 글의 ID(FK)
     @ManyToOne
+    @MapsId("a_id")
     @JoinColumn(name="a_id", referencedColumnName = "id")
     Article article;
 }

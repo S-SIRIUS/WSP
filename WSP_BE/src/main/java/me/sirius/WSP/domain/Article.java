@@ -19,7 +19,7 @@ public class Article {
     //글 ID
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id", updatable = false)
+    @Column(name="id", nullable = false, updatable = false)
     private int id;
 
     //제목

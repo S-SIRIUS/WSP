@@ -11,7 +11,7 @@ public class UserInfoResponse {
 
     public UserInfoResponse(UserInfo userinfo){
         this.total_points = userinfo.getTotal_points();
-        this.rank = userinfo.getRank();
+        this.rank = userinfo.getRanking();
         this.introduction = userinfo.getIntroduction();
     }
 }

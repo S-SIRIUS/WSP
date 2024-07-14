@@ -19,7 +19,7 @@ public class Solved {
     // 푼문제 id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id", updatable = false)
+    @Column(name="id", nullable = false, updatable = false)
     private int id;
 
     // FK(사용자 Id)

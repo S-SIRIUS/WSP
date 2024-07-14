@@ -19,7 +19,7 @@ public class User implements UserDetails {
     // 유저 ID(PK)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id", updatable = false)
+    @Column(name="id", nullable=false, updatable = false)
     private int id;
 
     // email 주소(값이 있어야함, 유니크 해야함: 중복 X)

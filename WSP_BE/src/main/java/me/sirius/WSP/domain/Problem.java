@@ -13,7 +13,7 @@ public class Problem {
     //문제 ID
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id", updatable = false)
+    @Column(name="id", nullable = false, updatable = false)
     private int id;
 
     // 문제의 점수
