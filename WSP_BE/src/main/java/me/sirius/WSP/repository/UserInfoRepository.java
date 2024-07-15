@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 // 유저에 대한 정보 가지고 오는 레포지토리
 @Repository
-public interface UserInfoRepository extends JpaRepository<UserInfo, UserInfoId> {
+public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
 }
