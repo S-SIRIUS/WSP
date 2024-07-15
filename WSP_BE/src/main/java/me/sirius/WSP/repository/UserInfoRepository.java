@@ -2,7 +2,6 @@ package me.sirius.WSP.repository;
 
 // import me.sirius.WSP.domain.Article;
 import me.sirius.WSP.domain.UserInfo;
-import me.sirius.WSP.domain.UserInfoId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

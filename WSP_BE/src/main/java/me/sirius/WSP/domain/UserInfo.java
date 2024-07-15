@@ -15,14 +15,11 @@ import java.io.Serializable;
 @Table(name="user_info")
 public class UserInfo {
 
-    @EmbeddedId
-    private UserInfoId id;
-
-    // FK(사용자 계정의 ID)
-    @OneToOne
-    @MapsId("u_id")
-    @JoinColumn(name="u_id", referencedColumnName = "id")
-    User user;
+    // Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id", nullable = false, updatable = false)
+    private int id;
 
     // 가지고 있는 총점수
     @Column(name="total_points")

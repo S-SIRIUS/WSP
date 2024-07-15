@@ -27,11 +27,19 @@ public class User{
     @Column(name="password", nullable = false)
     private String password;
 
+    // 1대1 매핑: 유저에서 유저정보 참조하게 끔
+    @OneToOne
+    @JoinColumn(name="info_id", referencedColumnName = "id")
+    UserInfo userInfo;
+
+
     @Builder
     public User(String email, String password, String auth){
         this.email = email;
         this.password = password;
     }
+
+
     /*
     @Override //권한목록 반환
     public Collection<? extends GrantedAuthority> getAuthorities(){
