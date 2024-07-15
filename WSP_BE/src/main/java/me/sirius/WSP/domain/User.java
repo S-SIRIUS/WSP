@@ -32,6 +32,10 @@ public class User{
     @JoinColumn(name="info_id", referencedColumnName = "id")
     UserInfo userInfo;
 
+    //사용자가 쓴 글 쉽게 조회하기 위해 양방향으로 매핑
+    @OneToMany(mappedBy = "user")
+    private List<Article> articles;
+
 
     @Builder
     public User(String email, String password, String auth){

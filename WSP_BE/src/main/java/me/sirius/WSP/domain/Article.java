@@ -2,15 +2,18 @@ package me.sirius.WSP.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @Entity
 @EntityListeners(AuditingEntityListener.class) // 글엔티티에서 수정시 자동반영
 @Table(name="article")
@@ -43,6 +46,10 @@ public class Article {
     //사용자 ID(FK)
     @ManyToOne // 사용자가 탈퇴해도 게시글은 남는다.
     @JoinColumn(name = "u_id", referencedColumnName = "id")
-    User user;
+    private User user;
+
+    // 글에 달린 댓글들 쉽게 조회하기 위해 양방향매핑
+    @OneToMany(mappedBy = "article", cascade= CascadeType.REMOVE)
+    private List<Comment> comments;
 
 }

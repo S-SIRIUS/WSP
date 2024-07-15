@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @Entity
 @EntityListeners(AuditingEntityListener.class) // 댓글 수정 자동반영
 @Table(name="comment")
@@ -38,5 +39,5 @@ public class Comment {
     @ManyToOne
     @MapsId("a_id")
     @JoinColumn(name="a_id", referencedColumnName = "id")
-    Article article;
+    private Article article;
 }
