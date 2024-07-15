@@ -37,6 +37,10 @@ public class User{
     private List<Article> articles;
 
 
+    //사용자가 푼 문제 쉽게 조회하기 위해 양방향으로 매핑
+    @OneToMany(mappedBy = "user")
+    private List<Solved> solved;
+
     @Builder
     public User(String email, String password, String auth){
         this.email = email;
