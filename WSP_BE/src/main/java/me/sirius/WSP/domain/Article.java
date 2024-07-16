@@ -23,7 +23,7 @@ public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id", nullable = false, updatable = false)
-    private int id;
+    private Long id;
 
     //제목
     @Column(name="title", nullable=false) // 글 작성시 제목 필수

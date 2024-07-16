@@ -16,7 +16,7 @@ public class Problem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id", nullable = false, updatable = false)
-    private int id;
+    private Long id;
 
     // 문제의 점수
     @Column(name="points")

@@ -19,7 +19,7 @@ public class UserInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id", nullable = false, updatable = false)
-    private int id;
+    private Long id;
 
     // 가지고 있는 총점수
     @Column(name="total_points")

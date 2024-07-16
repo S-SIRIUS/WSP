@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
@@ -17,7 +18,7 @@ public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id", nullable=false, updatable = false)
-    private int id;
+    private Long id;
 
     // email 주소(값이 있어야함, 유니크 해야함: 중복 X)
     @Column(name="email", nullable = false, unique = true)
